@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Hardstuck</title>
+		<title>Links - Hardstuck</title>
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
 	</head>
 	<style>
 		body
@@ -125,6 +126,32 @@
 		{
 			content: url("img/steam_logo.png");
 		}
+		
+		#art-credits-container
+		{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			padding-left: 10px;
+			padding-bottom: 10px;
+			mix-blend-mode: soft-light;
+			font-size: 14px;
+		}
+		
+		#art-credits-container:hover
+		{
+			mix-blend-mode: normal;
+			
+		}
+		
+		#art-credits-icon
+		{
+			content: url("img/art-credits.png");
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			
+		}
 	</style>
 	<body>
 		<div id="link-container">
@@ -169,6 +196,11 @@
 				<a class="link-button" target="_blank" href="https://shop.hardstuck.gg">Merch</a>
 				<a class="link-button" target="_blank" href="https://patreon.com/Hardstuck">Patreon</a>
 			</p>
+		</div>
+		
+		<div id="art-credits-container">
+			<a id="art-credits-icon" target="_blank" href="https://www.instagram.com/setius.art/"></a>
+			Artwork by Setius
 		</div>
 	</body>
 	<script>
