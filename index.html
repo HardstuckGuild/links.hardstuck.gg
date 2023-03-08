@@ -128,7 +128,7 @@
 			content: url("img/steam_logo.png");
 		}
 		
-		#art-credits-container
+		#art-credits
 		{
 			position: fixed;
 			left: 0;
@@ -136,22 +136,21 @@
 			padding-left: 10px;
 			padding-bottom: 10px;
 			mix-blend-mode: soft-light;
-			font-size: 14px;
+			vertical-align: middle;
 		}
 		
-		#art-credits-container:hover
+		#art-credits:hover
 		{
 			mix-blend-mode: normal;
-			
 		}
 		
-		#art-credits-icon
+		#art-credits:hover::after
 		{
-			content: url("img/art-credits.png");
-			width: 20px;
-			height: 20px;
-			vertical-align: middle;
-			
+			padding-left: 10px;
+			color: white;
+			text-decoration: none;
+			content: "Artwork by setius";
+			font-size: 14px;
 		}
 	</style>
 	<body>
@@ -199,10 +198,7 @@
 			</p>
 		</div>
 		
-		<div id="art-credits-container">
-			<a id="art-credits-icon" target="_blank" href="https://www.instagram.com/setius.art/"></a>
-			Artwork by Setius
-		</div>
+		<a id="art-credits" target="_blank" href="https://www.instagram.com/setius.art/"><img src="img/art-credits.png" height="20px"></a>
 	</body>
 	<script>
 		
