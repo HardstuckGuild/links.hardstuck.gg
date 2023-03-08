@@ -2,6 +2,8 @@
 <html>
 	<head>
 		<title>Links - Hardstuck</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,6 +11,36 @@
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
 	</head>
 	<style>
+		@media (max-width: 480px) {
+			#link-container {
+				width: 80%;
+			}
+		}
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			#link-container {
+				width: 60%;
+			}
+		}
+
+		@media (min-width: 769px) and (max-width: 1024px) {
+			#link-container {
+				width: 50%;
+			}
+		}
+
+		@media (min-width: 1025px) and (max-width: 1200px) {
+			#link-container {
+				width: 40%;
+			}
+		}
+
+		@media (min-width: 1201px) {
+			#link-container {
+				width: 33%;
+			}
+		}
+
 		body
 		{
 			background: url("img/background.png") no-repeat center center fixed;
@@ -25,17 +57,16 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			text-align: center;
-			width: 33%;
 		}
 		
-		#avatar
+		.avatar
 		{
 			content: url("img/avatar.png");
 			height: 100px;
 			width: 100px;
 		}
 		
-		#logotype
+		.logotype
 		{
 			content: url("img/logotype.png");
 			width: 100%;
@@ -75,11 +106,15 @@
 			background-color: #9B2FED;
 			transition: 0.2s ease;
 			margin: 8px auto;
+			text-overflow: ellipsis;
+			white-space: nowrap; 
+			overflow: hidden;
+			padding: 5px;
 		}
 		
 		.link-button:hover
 		{
-			!filter: brightness(1.3) saturate(150%);
+			filter: brightness(1.3) saturate(150%);
 			mix-blend-mode: difference;
 			background-blend-mode: difference;
 			background: url("img/background.png"), #9B2FED;
@@ -93,7 +128,7 @@
 			height: 40px;
 			width: 40px;
 			border-radius: 50%;
-			!border: 1px solid;
+			border: 1px solid;
 			margin: auto 7.5px;
 		}
 		
@@ -128,7 +163,7 @@
 			content: url("img/steam_logo.png");
 		}
 		
-		#art-credits
+		#art-credits-container
 		{
 			position: fixed;
 			left: 0;
@@ -136,31 +171,36 @@
 			padding-left: 10px;
 			padding-bottom: 10px;
 			mix-blend-mode: soft-light;
-			vertical-align: middle;
+			font-size: 14px;
 		}
 		
-		#art-credits:hover
+		#art-credits-container:hover
 		{
 			mix-blend-mode: normal;
+			
 		}
 		
-		#art-credits:hover::after
+		.art-credits {
+			margin-top: 20px;
+		}
+
+		#art-credits-icon
 		{
-			padding-left: 10px;
-			color: white;
-			text-decoration: none;
-			content: "Artwork by setius";
-			font-size: 14px;
+			content: url("img/art-credits.png");
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			
 		}
 	</style>
 	<body>
 		<div id="link-container">
 			<center>
-				<div id="avatar"></div>
+				<div class="avatar"></div>
 			</center>
 			
 			<center>
-				<div id="logotype"></div>
+				<div class="logotype"></div>
 			</center>
 			
 			<p>
@@ -196,9 +236,12 @@
 				<a class="link-button" target="_blank" href="https://shop.hardstuck.gg">Merch</a>
 				<a class="link-button" target="_blank" href="https://patreon.com/Hardstuck">Patreon</a>
 			</p>
+
+			<div class="art-credits">
+				<a id="art-credits-icon" target="_blank" href="https://www.instagram.com/setius.art/"></a>
+				Artwork by Setius
+			</div>
 		</div>
-		
-		<a id="art-credits" target="_blank" href="https://www.instagram.com/setius.art/"><img src="img/art-credits.png" height="20px"></a>
 	</body>
 	<script>
 		
