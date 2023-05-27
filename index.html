@@ -15,23 +15,48 @@
 			#link-container {
 				width: 80%;
 			}
+			
+			#credits {
+			  width: 80%;
+			  margin-top: 10px;
+			  margin: auto;
+			  display: flex;
+			  align-items: center;
+			  flex-direction: column;
+			  padding-top: 0px;
+			}
+			
+			.arenanet-partner {
+				margin-top: 20px;
+			}
+			
+			.art-credits {
+				margin-top: 10px;
+			}
 		}
+		
+		@media (min-width: 481px) {
+			#credits {
+			  margin-top: 60px;
+			}
+		}
+		
 
 		@media (min-width: 481px) and (max-width: 768px) {
 			#link-container {
-				width: 60%;
+				width: 70%;
 			}
 		}
 
 		@media (min-width: 769px) and (max-width: 1024px) {
 			#link-container {
-				width: 50%;
+				width: 60%;
 			}
 		}
 
 		@media (min-width: 1025px) and (max-width: 1200px) {
 			#link-container {
-				width: 40%;
+				width: 50%;
 			}
 		}
 
@@ -40,6 +65,11 @@
 				width: 33%;
 			}
 		}
+		
+		#link-container {
+			margin: auto;
+		}
+	
 
 		body
 		{
@@ -50,14 +80,16 @@
 			font-family: 'Josefin Sans', sans-serif;
 		}
 		
-		#link-container
-		{
+		#page-container {
+			width: 100%;
+			max-height: 100%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			text-align: center;
 		}
+		
 		
 		.avatar
 		{
@@ -163,26 +195,13 @@
 			content: url("img/steam_logo.png");
 		}
 		
-		#art-credits-container
-		{
-			position: fixed;
-			left: 0;
-			bottom: 0;
-			padding-left: 10px;
-			padding-bottom: 10px;
-			mix-blend-mode: soft-light;
-			font-size: 14px;
-		}
-		
-		#art-credits-container:hover
-		{
-			mix-blend-mode: normal;
-			
-		}
 		
 		.art-credits {
-			margin-top: 20px;
+		  display: flex;
+		  align-items: center;
+		  opacity: 75%;
 		}
+		
 
 		#art-credits-icon
 		{
@@ -190,56 +209,85 @@
 			width: 20px;
 			height: 20px;
 			vertical-align: middle;
+			margin-right: 4px;
 			
+		}
+		
+		#credits {
+		  display: flex;
+		  justify-content: space-between;
+		  padding: 0 10px;
+		  box-sizing: border-box;
+		}
+		
+		.arenanet-partner {
+		  display: flex;
+		  justify-content: flex-end;
+		  align-items: center;
+		}
+
+		.arenanet-partner img {
+		  max-width: 250px;
+		  margin-left: auto;
+		  margin-right: 0;
+		  opacity: 75%;
 		}
 	</style>
 	<body>
-		<div id="link-container">
-			<center>
-				<div class="avatar"></div>
-			</center>
-			
-			<center>
-				<div class="logotype"></div>
-			</center>
-			
-			<p>
-				RESOURCES • BUILDS • GUIDES • EVENTS
-				<br>
-				Biggest social & gameplay-oriented community in Guild Wars 2.
-			</p>
-			
-			<section id="social-icons">
-				<a target="_blank" href="https://twitter.com/hardstuckguild" class="icon twitter"></a>
-				<a target="_blank" href="https://instagram.com/hardstuckguild" class="icon instagram"></a>
-				<a target="_blank" href="https://twitch.tv/hardstuckguild" class="icon twitch"></a>
-				<a target="_blank" href="https://youtube.com/@HardstuckGG" class="icon youtube"></a>
-				<a target="_blank" href="https://steamcommunity.com/groups/HardstuckGuild" class="icon steam"></a>
-			</section>
-			
-			<hr>
-			
-			<h2>Latest</h2>
-			<p>
-				<a class="link-button" target="_blank" href="https://hardstuck.gg/rcc-aftershow/">Ready Check Cup Aftershow!</a>
-				<a class="link-button" target="_blank" href="https://forms.gle/2m8KTg7kAHJQRZHD8">Apply to join the in-game guild!</a>
-			</p>
-			
-			<h2>Join Us</h2>
-			<p>
-				<a class="link-button" target="_blank" href="https://hardstuck.gg">Website</a>
-				<a class="link-button" target="_blank" href="https://discord.gg/hardstuck">Discord</a>
-			</p>
-			
-			<h2>Support Us</h2>
-			<p>
-				<a class="link-button" target="_blank" href="https://shop.hardstuck.gg">Merch</a>
-				<a class="link-button" target="_blank" href="https://patreon.com/Hardstuck">Patreon</a>
-			</p>
+		<div id="page-container">
+			<div id="link-container">
+				<center>
+					<div class="avatar"></div>
+				</center>
+				
+				<center>
+					<div class="logotype"></div>
+				</center>
+				
+				<p>
+					RESOURCES • BUILDS • GUIDES • EVENTS
+					<br>
+					Biggest social & gameplay-oriented community in Guild Wars 2.
+				</p>
+				
+				<section id="social-icons">
+					<a target="_blank" href="https://twitter.com/hardstuckguild" class="icon twitter"></a>
+					<a target="_blank" href="https://instagram.com/hardstuckguild" class="icon instagram"></a>
+					<a target="_blank" href="https://twitch.tv/hardstuckguild" class="icon twitch"></a>
+					<a target="_blank" href="https://youtube.com/@HardstuckGG" class="icon youtube"></a>
+					<a target="_blank" href="https://steamcommunity.com/groups/HardstuckGuild" class="icon steam"></a>
+				</section>
+				
+				<hr>
+				
+				<h2>Latest</h2>
+				<p>
+					<a class="link-button" target="_blank" href="https://hardstuck.gg/rcc-aftershow/">Ready Check Cup Aftershow!</a>
+					<a class="link-button" target="_blank" href="https://forms.gle/2m8KTg7kAHJQRZHD8">Apply to join the in-game guild!</a>
+				</p>
+				
+				<h2>Join Us</h2>
+				<p>
+					<a class="link-button" target="_blank" href="https://hardstuck.gg">Website</a>
+					<a class="link-button" target="_blank" href="https://discord.gg/hardstuck">Discord</a>
+				</p>
+				
+				<h2>Support Us</h2>
+				<p>
+					<a class="link-button" target="_blank" href="https://shop.hardstuck.gg">Merch</a>
+					<a class="link-button" target="_blank" href="https://patreon.com/Hardstuck">Patreon</a>
+				</p>
 
-			<div class="art-credits">
+			</div>
+			
+			<div id="credits">
+				<div class="art-credits">
 				<a id="art-credits-icon" target="_blank" href="https://www.instagram.com/setius.art/"></a>
 				Artwork by Setius
+				</div>
+				<div class="arenanet-partner">
+					<img src="https://assets.hardstuck.gg/uploads/ArenaNetPartner.png">
+				</div>
 			</div>
 		</div>
 	</body>
